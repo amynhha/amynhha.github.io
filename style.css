@@ -1,0 +1,410 @@
+:root {
+    --text-color: #333333;
+    --link-color: #333333;
+    --background-color: #ffcad4;
+    --minimal-color: #fbeee6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    background-color: white;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.375rem;
+}
+
+nav .right a:hover {
+    color: var(--background-color);
+    transition: color 0.2s ease-in-out;
+}
+
+/* GENERAL STYLING */
+
+.header {
+    position: relative;
+    background-color: var(--minimal-color);  /* Background color */
+    display: inline-block; /* Adjust width based on content */
+    padding: 10px 20px;  /* Adds some padding for better appearance */
+    text-align: left;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--text-color);   /* Left border */
+    border-right: 3px solid var(--text-color);  /* Right border */
+    border-bottom: 3px solid var(--text-color); /* Bottom border */
+}
+
+
+hr {
+    border: 0; /* Removes the default border */
+    height: 3px; /* Sets the thickness of the line */
+    background-color: var(--text-color); /* Sets the color of the line */
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+/* SECTION 1 */
+
+.aboutme {
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 55px;
+}
+
+.aboutme .content1 {
+    padding-left: 10px;
+    padding-right: 100px;
+}
+.aboutme .content1 .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: left;
+}
+
+.aboutme .content1 .headshot img {
+    width: 270px;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+
+.aboutme .content1 .text {
+    flex: 5;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--minimal-color);
+    color: var(--text-color); 
+    padding: 25px 20px;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 30px;
+    left: 360px;
+    bottom: 325px;
+    top: 130px;
+    right: 70px;
+}
+
+.aboutme .content1 .text .p {
+    margin-bottom: 10px;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.aboutme .content1 .text .links {
+    margin-top: 10px;
+    position: relative;
+}
+
+.aboutme .content1 .text .links a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 30px;
+}
+
+.aboutme .content1 .text .links a:hover {
+    color: var(--background-color);
+    transition: color 0.2s ease-in-out;
+}
+
+/* SECTION 2 */
+
+.myprojects .media-scroller {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 1600px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0 auto;
+}
+
+.myprojects .scroll {
+    flex: 0 0 16rem; /* Fixed width for the boxes */
+    text-align: center;
+    border: 1px solid #d7dbd8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    background-color: var(--minimal-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+}
+
+.myprojects .scroll:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: var(--background-color);
+}
+
+.myprojects .scroll img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem; 
+}
+
+.myprojects .scroll h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color)
+}
+
+.myprojects .scroll h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color)
+}
+
+.myprojects .scroll p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color)
+}
+
+/* SECTION 3 */
+
+.myskills {
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 75px;
+}
+
+.myskills .skills-container {
+    display: flex;
+    align-items: center; /* Vertically align the items */
+    justify-content: space-evenly; /* Evenly space the items */
+    flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+    padding: 10px 0; /* Adjust padding if necessary */
+    margin-bottom: 70px; /* Increased margin at the bottom to create more space below */
+}
+
+.myskills .skills-container h3 {
+    margin: 0 10px; /* Space out the text items */
+    color: var(--text-color);
+}
+
+.myskills .skills-container i {
+    font-size: 2rem; /* Adjust size of the icons */
+    margin: 0 10px; /* Space out the icons */
+    color: var(--text-color);
+}
+
+.myskills .skills-container h3:hover {
+    color: var(--minimal-color);
+    transition: color 0.2s ease-in-out;
+}
+
+.myskills .skills-container i:hover {
+    color: var(--minimal-color);
+    transition: color 0.2s ease-in-out;
+}
+
+/* SECTION 4 */
+
+.contactme {
+    background-color: var(--background-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack contact-left and contact-right vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-right {
+    order: -1; /* Move contact-right to the top */
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    border-radius: 50px;
+    border-color: var(--minimal-color);
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid var(--background-color); 
+}
+
+.contact-inputs:placeholder {
+    color: var(--minimal-color);
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: var(--text-color);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #e9899a;
+}
+
+.contact-left button i {
+    color: var(--text-color);
+}
+
+
+/* MEDIA ADJUSTMENT */
+@media (max-width: 992px) {
+    nav .left a {
+        font-size: 1.25rem;
+    }
+    nav .right a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+    .aboutme .headshot img {
+        width: 18rem;
+    }
+    .aboutme .content1 .text {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px;
+        max-width: 100%; /* Take up full width */
+    }
+    .myprojects .scroll {
+        flex: 0 0 14rem; /* Adjust width for smaller screens */
+    }
+    .myskills i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .left a {
+        font-size: 1.25rem;
+    }
+    nav .right a {
+        font-size: 1.1rem;
+        margin: 0 0.375rem;
+    }
+    .aboutme .headshot img {
+        width: 16rem;
+    }
+    .aboutme .content1 .text {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 10px;
+        max-width: 80%; /* Take up full width */
+    }
+    .myprojects .project-box {
+        flex: 0 0 14rem;
+    }
+    .myskills {
+        font-size: 2rem;
+    }
+    .myskills .skills-container {
+        gap: 1.25rem;
+     }
+     .contact-right {
+        display: none;
+     }
+}
+
+@media (max-width: 576px) {
+    nav {
+        padding: 0 1rem;
+    }
+    nav .left a {
+        font-size: 1.1rem;
+    }
+    nav .right a {
+        font-size: 0.8rem;
+        margin: 0 0.25rem;
+    }
+    .aboutme .links {
+        font-size: 1.75rem;
+    }
+    .aboutme .headshot img {
+        width: 12rem;
+    }
+    .aboutme .content1 .text {
+        font-size: 10px; /* Smaller font size for mobile */
+        padding: 10px;
+        max-width: 60%; /* Take up full width */
+    }
+    .myprojects .project-box {
+        flex: 0 0 14rem;
+    }
+    .myskills i {
+        font-size: 1.5rem;
+    }
+    .myskills .skills-container {
+       gap: 1rem;
+    }
+    section {
+        padding: 6rem 1rem; /* Adjust padding for smaller screens */
+    }
+    .myprojects {
+        padding: 6rem 1rem; /* Adjust padding for smaller screens */
+    }
+    .contactme {
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+}
