@@ -91,6 +91,12 @@ h1 {
     padding-left: 10px;
     padding-right: 100px;
 }
+.aboutme .content1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .aboutme .content1 .headshot {
     flex: 2;
     display: flex;
@@ -105,26 +111,25 @@ h1 {
 
 .aboutme .content1 .text {
     flex: 5;
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    background-color: var(--minimal-color);
-    color: var(--text-color); 
+    margin-left: 30px; /* Distance from the image */
     padding: 25px 20px;
-    border-radius: 15px; /* Rounded corners */
-    font-size: 16px;
+    border-radius: 2%; /* Rounded corners */
+    background-color: var(--minimal-color);
+    border-radius: 15px;
+    font-size: 1rem;
     max-width: 100%;
-    line-height: 30px;
-    left: 360px;
-    bottom: 325px;
-    top: 130px;
-    right: 70px;
+    color: #333333;
 }
 
 .aboutme .content1 .text .p {
-    margin-bottom: 10px;
-    align-items: center;
+    margin-top: 50px;
     padding-left: 10%;
+    text-align: center;
+    color: #333333;
+    padding: 25px 20px;
+    border-radius: 2%; /* Rounded corners */
+    font-size: 1rem;
+    max-width: 100%;
 }
 
 .aboutme .content1 .text .links {
@@ -220,7 +225,7 @@ h1 {
     margin-bottom: 70px; /* Increased margin at the bottom to create more space below */
 }
 
-.myskills .skills-container h3 {
+.myskills .skills-container p {
     margin: 0 10px; /* Space out the text items */
     color: var(--text-color);
 }
@@ -313,7 +318,10 @@ h1 {
 
 
 /* MEDIA ADJUSTMENT */
-@media (max-width: 992px) {
+@media (max-width: 1940px) {
+    .header {
+        font-size: 0.9rem;
+    }
     nav .left a {
         font-size: 1.25rem;
     }
@@ -324,20 +332,52 @@ h1 {
     .aboutme .headshot img {
         width: 18rem;
     }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        font-size: 0.9rem;
+    }
+    nav .left a {
+        font-size: 1.25rem;
+    }
+    nav .right a {
+        font-size: 1.1rem;
+        margin: 0 0.375rem;
+    }
+    .aboutme .headshot img {
+        width: 16rem;
+    }
     .aboutme .content1 .text {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
         padding: 10px;
-        max-width: 100%; /* Take up full width */
+        max-width: 80%; /* Take up full width */
     }
-    .myprojects .scroll {
-        flex: 0 0 14rem; /* Adjust width for smaller screens */
+    .myprojects .project-box {
+        flex: 0 0 16rem;
     }
-    .myskills i {
-        font-size: 2.5rem;
+    .myskills {
+        font-size: 2rem;
     }
+    .myskills .skills-container {
+        display: flex;
+        align-items: center; /* Vertically align the items */
+        justify-content: space-evenly; /* Evenly space the items */
+        flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+        padding-top: 20px; /* Adjust padding if necessary */
+    }
+    .myskills .skills-container {
+        gap: 1.25rem;
+     }
+     .contact-right {
+        font-size: 1rem;
+     }
 }
 
 @media (max-width: 768px) {
+    .header {
+        font-size: 0.9rem;
+    }
     nav .left a {
         font-size: 1.25rem;
     }
@@ -360,14 +400,24 @@ h1 {
         font-size: 2rem;
     }
     .myskills .skills-container {
+        display: flex;
+        align-items: center; /* Vertically align the items */
+        justify-content: space-evenly; /* Evenly space the items */
+        flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+        padding-top: 20px; /* Adjust padding if necessary */
+    }
+    .myskills .skills-container {
         gap: 1.25rem;
      }
      .contact-right {
-        display: none;
+        font-size: 1rem;
      }
 }
 
 @media (max-width: 576px) {
+    .header {
+        font-size: 0.9rem;
+    }
     nav {
         padding: 0 1rem;
     }
@@ -390,10 +440,20 @@ h1 {
         max-width: 60%; /* Take up full width */
     }
     .myprojects .project-box {
-        flex: 0 0 14rem;
+        flex: 0 0 10rem;
+    }
+    .myskills .skills-container {
+        display: flex;
+        align-items: center; /* Vertically align the items */
+        justify-content: space-evenly; /* Evenly space the items */
+        flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+        padding-top: 80px; /* Adjust padding if necessary */
     }
     .myskills i {
         font-size: 1.5rem;
+    }
+    .myskills p {
+        font-size: 2rem;
     }
     .myskills .skills-container {
        gap: 1rem;
@@ -407,4 +467,7 @@ h1 {
     .contactme {
         padding: 3rem 1rem; /* Adjust padding for smaller screens */
     }
+    .contact-right {
+        font-size: 1rem;
+     }
 }
